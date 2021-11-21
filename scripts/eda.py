@@ -9,11 +9,61 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+import seaborn as sns
+from matplotlib_venn import venn3
+from matplotlib_venn_wordcloud import venn3_wordcloud
+import plotly.express as px
+import plotly.graph_objects as go
 
 BASE_FP = '../data/'
 BASE_FP_OUTPUT_I = '../output/eda/idealized/'
 BASE_FP_OUTPUT_CS = '../output/eda/cs/'
 BASE_FP_OUTPUT_PH = '../output/eda/ph/'
+BASE_FP_OUTPUT_RESEARCH = '../output/eda/researchers/'
+BASE_FP_OUTPUT_VISUALIZATIONS = '../output/visualizations/'
+
+
+########################################################################################################
+# researcher_plots
+# Inputs: researchers - df 1
+# Return: N/A
+# Description: plots figures and descriptive statistics for the three main researchers
+########################################################################################################
+def researcher_plots(researchers):
+    # Make comparative boxplots for De Choudhury, Drezde, and Coppersmith
+    researchers_dict = {'Choudhury': [], 'Drezde': [], 'Coppersmith': []}
+
+    df_choudhury = researchers[researchers['Choudhury'] == 1]
+    for item in df_choudhury['%_of_idealized']:
+        researchers_dict['Choudhury'].append(item)
+
+    df_drezde = researchers[researchers['Drezde'] == 1]
+    for item in df_drezde['%_of_idealized']:
+        researchers_dict['Drezde'].append(item)
+
+    df_coppersmith = researchers[researchers['Coppersmith'] == 1]
+    for item in df_coppersmith['%_of_idealized']:
+        researchers_dict['Coppersmith'].append(item)
+
+    fig, ax = plt.subplots()
+    ax.boxplot(researchers_dict.values())
+    ax.set_xticklabels(researchers_dict.keys())
+
+    plt.savefig(os.path.join(BASE_FP_OUTPUT_RESEARCH, 'comp_boxplots_researchers.png'))
+    plt.clf()
+
+    # Make overlapping histograms for De Choudhury, Drezde, and Coppersmith
+    plt.hist(df_choudhury['%_of_idealized'], label="Choudhury")
+    plt.hist(df_drezde['%_of_idealized'], label="Drezde")
+    plt.hist(df_coppersmith['%_of_idealized'], label="Coppersmith")
+
+    plt.xlabel("Scores")
+    plt.ylabel("Frequency")
+    plt.title("Distribution of Scores")
+    plt.legend(loc='upper right')
+
+    plt.savefig(os.path.join(BASE_FP_OUTPUT_RESEARCH, 'comp_hists_researchers.png'))
+    plt.clf()
 
 
 ########################################################################################################
@@ -72,7 +122,7 @@ def plot_histograms(df, column, FILE_PATH):
 # Description: creates histograms of each of the columns of interest, plus overall hist plots for each
 # df
 ########################################################################################################
-def plot_histograms_overall(idealized, cs, ph, columns_i, columns_cs, columns_ph):
+def plot_histograms_overall(idealized, cs, ph, researchers, columns_i, columns_cs, columns_ph, columns_research):
     # create idealized histograms
     idealized.hist()
     file_name = 'histograms_i.png'
@@ -99,6 +149,15 @@ def plot_histograms_overall(idealized, cs, ph, columns_i, columns_cs, columns_ph
 
     for column in columns_ph:
         plot_histograms(ph, column, BASE_FP_OUTPUT_PH)
+
+    # create researchers histograms
+    ph.hist()
+    file_name = 'histograms_researchers.png'
+    plt.savefig(os.path.join(BASE_FP_OUTPUT_RESEARCH, file_name))
+    plt.clf()
+
+    for column in columns_research:
+        plot_histograms(researchers, column, BASE_FP_OUTPUT_RESEARCH)
 
 
 ########################################################################################################
@@ -133,32 +192,42 @@ def summary_stats_by_df(columns, df):
 # to output csv's 'idealized_summary_stats.csv', 'cs_summary_stats.csv', and 'ph_summary_stats.csv'.
 # Also generates histograms and boxplots
 ########################################################################################################
-def generate_summary_stats(idealized, cs, ph):
+def generate_summary_stats(idealized, cs, ph, researchers):
     # identify columns of interest
-    columns_i = ['data_source_i', 'class_collection_i', 'dem_dist_i', 'informed_consent_i', 'data_public_i', 'irb_i',
-                 'ground_truth_size_i', 'ground_truth_discussion_i', 'limitations_i', 'preprocess_anonymity_i',
-                 'preprocess_drop_i', 'preprocess_missing_values_i', 'preprocess_noise_i', 'preprocess_text_i',
-                 'ethics_section_i', '%_of_idealized']
-    columns_cs = ['data_source_cs', 'class_collection_cs', 'dem_dist_cs', 'irb_cs', 'ground_truth_size_cs',
-                  'ground_truth_discussion_cs', 'preprocess_drop_cs', '%_of_cs']
-    columns_ph = ['data_source_ph', 'class_collection_ph', 'dem_dist_ph', 'informed_consent_ph', 'irb_ph',
-                  'ground_truth_size_ph', 'ground_truth_discussion_ph', '%_of_ph']
+    columns_i = ['data_source_i', 'class_collection_i', 'random_sample_i', 'replication_i', 'dem_dist_i',
+                 'informed_consent_i', 'data_public_i', 'irb_i', 'ground_truth_size_i', 'ground_truth_discussion_i',
+                 'limitations_i', 'preprocess_anonymity_i', 'preprocess_drop_i', 'preprocess_missing_values_i',
+                 'preprocess_noise_i', 'preprocess_text_i', 'ethics_section_i', '%_of_idealized']
+    columns_cs = ['data_source_cs', 'class_collection_cs', 'random_sample_cs', 'replication_cs', 'dem_dist_cs',
+                  'irb_cs', 'ground_truth_size_cs', 'ground_truth_discussion_cs', 'preprocess_drop_cs', '%_of_cs']
+    columns_ph = ['data_source_ph', 'class_collection_ph', 'random_sample_ph', 'replication_ph', 'dem_dist_ph',
+                  'informed_consent_ph', 'irb_ph', 'ground_truth_size_ph', 'ground_truth_discussion_ph', '%_of_ph']
+    columns_research = ['Num_Researchers', 'Choudhury', 'Drezde', 'Coppersmith', 'data_source_i', 'class_collection_i',
+                        'random_sample_i', 'replication_i', 'dem_dist_i', 'informed_consent_i', 'data_public_i',
+                        'irb_i', 'ground_truth_size_i', 'ground_truth_discussion_i', 'limitations_i',
+                        'preprocess_anonymity_i', 'preprocess_drop_i', 'preprocess_missing_values_i',
+                        'preprocess_noise_i', 'preprocess_text_i', 'ethics_section_i', '%_of_idealized']
 
     # generate summary stats
     idealized_stats = summary_stats_by_df(columns_i, idealized)
     cs_stats = summary_stats_by_df(columns_cs, cs)
     ph_stats = summary_stats_by_df(columns_ph, ph)
+    researcher_stats = summary_stats_by_df(columns_research, researchers)
 
     # output summary stats to csv's
     idealized_stats.to_csv(f'{BASE_FP_OUTPUT_I}idealized_summary_stats.csv', index=False)
     cs_stats.to_csv(f'{BASE_FP_OUTPUT_CS}cs_summary_stats.csv', index=False)
     ph_stats.to_csv(f'{BASE_FP_OUTPUT_PH}ph_summary_stats.csv', index=False)
+    researcher_stats.to_csv(f'{BASE_FP_OUTPUT_RESEARCH}researcher_summary_stats.csv', index=False)
 
     # plot appropriate histograms
-    plot_histograms_overall(idealized, cs, ph, columns_i, columns_cs, columns_ph)
+    plot_histograms_overall(idealized, cs, ph, researchers, columns_i, columns_cs, columns_ph, columns_research)
 
     # plot appropriate boxplots
     plot_boxplots(idealized, cs, ph)
+
+    # find researcher stats + plots
+    researcher_plots(researchers)
 
 
 ########################################################################################################
@@ -175,21 +244,93 @@ def create_sub_dfs(df):
     df = df.dropna()
 
     # create idealized df
-    idealized = df[['Link to paper', 'Task', 'data_source_i', 'class_collection_i', 'dem_dist_i',
-                    'informed_consent_i', 'data_public_i', 'irb_i', 'ground_truth_size_i',
+    idealized = df[['Link to paper', 'Task', 'data_source_i', 'class_collection_i', 'random_sample_i', 'replication_i',
+                    'dem_dist_i', 'informed_consent_i', 'data_public_i', 'irb_i', 'ground_truth_size_i',
                     'ground_truth_discussion_i', 'limitations_i', 'preprocess_anonymity_i', 'preprocess_drop_i',
                     'preprocess_missing_values_i', 'preprocess_noise_i', 'preprocess_text_i', 'ethics_section_i',
                     '%_of_idealized']].copy()
 
     # create cs df
-    cs = df[['Link to paper', 'Task', 'data_source_cs', 'class_collection_cs', 'dem_dist_cs', 'irb_cs',
-             'ground_truth_size_cs', 'ground_truth_discussion_cs', 'preprocess_drop_cs', '%_of_cs']].copy()
+    cs = df[['Link to paper', 'Task', 'data_source_cs', 'class_collection_cs', 'random_sample_cs', 'replication_cs',
+             'dem_dist_cs', 'irb_cs', 'ground_truth_size_cs', 'ground_truth_discussion_cs', 'preprocess_drop_cs',
+             '%_of_cs']].copy()
 
     # create ph df
-    ph = df[['Link to paper', 'Task', 'data_source_ph', 'class_collection_ph', 'dem_dist_ph', 'informed_consent_ph',
-             'irb_ph', 'ground_truth_size_ph', 'ground_truth_discussion_ph', '%_of_ph']].copy()
+    ph = df[['Link to paper', 'Task', 'data_source_ph', 'class_collection_ph', 'random_sample_ph', 'replication_ph',
+             'dem_dist_ph', 'informed_consent_ph', 'irb_ph', 'ground_truth_size_ph', 'ground_truth_discussion_ph',
+             '%_of_ph']].copy()
 
-    return idealized, cs, ph
+    researchers = df[['Num_Researchers', 'Choudhury', 'Drezde', 'Coppersmith', 'data_source_i', 'class_collection_i',
+                      'random_sample_i', 'replication_i', 'dem_dist_i', 'informed_consent_i', 'data_public_i',
+                      'irb_i', 'ground_truth_size_i', 'ground_truth_discussion_i', 'limitations_i',
+                      'preprocess_anonymity_i', 'preprocess_drop_i', 'preprocess_missing_values_i',
+                      'preprocess_noise_i', 'preprocess_text_i', 'ethics_section_i', '%_of_idealized']].copy()
+
+    return idealized, cs, ph, researchers
+
+
+########################################################################################################
+# create_venn
+# Inputs: N/A
+# Return: N/A
+# Description: Create Venn diagrams to explain relationship between cs, ph, and idealized norms
+# References:
+# Venn diagram base - https://github.com/konstantint/matplotlib-venn
+# Extended Venn diagram with wordcloud - https://github.com/paulbrodersen/matplotlib_venn_wordcloud
+# Wordcloud documentation - https://github.com/amueller/word_cloud
+########################################################################################################
+def create_venn():
+    # Identify sets
+    circle_cs = ['Data Source', 'Class Collection', 'Random Sample', 'Replication', 'Dem Dist', 'IRB', 'GT Size',
+                 'GT Discussion', 'Drop']
+    circle_ph = ['Data Source', 'Class Collection', 'Random Sample', 'Replication', 'Dem Dist', 'Consent', 'IRB',
+                 'GT Size', 'GT Discussion']
+    circle_i = ['Data Source', 'Class Collection', 'Random Sample', 'Replication', 'Dem Dist', 'Consent', 'IRB',
+                'Public Data', 'GT Size', 'GT Discussion', 'Limitations', 'Anonymity', 'Drop', 'Missing Values',
+                'Noise', 'Text', 'Ethics Section']
+    labels = ['Computer Science', 'Public Health', 'Idealized']
+
+    # create Venn diagram 1
+    venn3([set(circle_cs), set(circle_ph), set(circle_i)], set_labels=labels)
+    plt.savefig(os.path.join(BASE_FP_OUTPUT_VISUALIZATIONS, 'Venn.png'))
+    plt.clf()
+
+    # create Venn diagram 2 (with words)
+    venn3_wordcloud([set(circle_cs), set(circle_ph), set(circle_i)], set_colors=['w', 'w', 'w'],
+                    set_edgecolors=['k', 'k', 'k'], wordcloud_kwargs={'min_font_size': 14})
+    plt.savefig(os.path.join(BASE_FP_OUTPUT_VISUALIZATIONS, 'Venn_wordcloud.png'))
+    plt.clf()
+
+
+########################################################################################################
+# create_heatmap
+# Inputs: N/A
+# Return: N/A
+# Description: Create heatmap to display the paper score breakdown
+########################################################################################################
+def create_heatmap(idealized):
+    df = idealized.drop(['Link to paper', 'Task', '%_of_idealized'], axis=1)
+    df_list = df.values.tolist()
+    fig = go.Figure(data=go.Heatmap(z=df_list, x=df.columns, colorscale='purples'))
+    fig.show()
+    # do 'pip install -U kaleido' and try again to save image when have better wifi
+    fig.write_image(os.path.join(BASE_FP_OUTPUT_VISUALIZATIONS, 'heatmap.png'))
+
+
+########################################################################################################
+# make_visualizations
+# Inputs: idealized - df 1, cs - df 2, ph - df 3, researchers - df 4
+# Return: N/A
+# Description: Generates visualizations based off of scores and definitions
+########################################################################################################
+def make_visualizations(idealized, cs, ph, researchers):
+    # Create Venn diagrams to explain relationship between cs, ph, and idealized norms
+    create_venn()
+
+    # Create heatmap to display the paper score breakdown
+    # Maybe try with the binned values instead of the individual pieces? if doing binned, scale binned to
+    # between 0 and 2
+    create_heatmap(idealized)
 
 
 ########################################################################################################
@@ -201,11 +342,14 @@ def create_sub_dfs(df):
 def main():
 
     # open file
-    df = pd.read_csv(f'{BASE_FP}thesis_raw.csv')
+    # df = pd.read_csv(f'{BASE_FP}thesis_raw.csv')
+    df = pd.read_csv(f'{BASE_FP}thesis_raw_v2.csv')
 
-    idealized, cs, ph = create_sub_dfs(df)
+    idealized, cs, ph, researchers = create_sub_dfs(df)
 
-    generate_summary_stats(idealized, cs, ph)
+    #generate_summary_stats(idealized, cs, ph, researchers)
+
+    make_visualizations(idealized, cs, ph, researchers)
 
 
 if __name__ == '__main__':
