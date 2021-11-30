@@ -306,14 +306,16 @@ def create_venn():
 # create_heatmap
 # Inputs: N/A
 # Return: N/A
-# Description: Create heatmap to display the paper score breakdown
+# Description: Create heatmap to display the paper score breakdown, where the papers are ordered by
+# paper score and the columns are sorted by average score
 ########################################################################################################
 def create_heatmap(idealized):
-    df = idealized.drop(['Link to paper', 'Task', '%_of_idealized'], axis=1)
+    temp_df = idealized.sort_values(by='%_of_idealized')
+    df = temp_df.drop(['Link to paper', 'Task', '%_of_idealized'], axis=1)
+    df = df.reindex(df.mean().sort_values(ascending=False).index, axis=1)
     df_list = df.values.tolist()
     fig = go.Figure(data=go.Heatmap(z=df_list, x=df.columns, colorscale='purples'))
     fig.show()
-    # do 'pip install -U kaleido' and try again to save image when have better wifi
     fig.write_image(os.path.join(BASE_FP_OUTPUT_VISUALIZATIONS, 'heatmap.png'))
 
 
