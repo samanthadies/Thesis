@@ -98,13 +98,24 @@ def plot_boxplots(idealized, cs, ph):
 # Return: N/A
 # Description: plots histogram of specified dataframe column and saves plot
 ########################################################################################################
-def plot_histograms(df, column, FILE_PATH):
-    # create histogram and with label
-    df[column].hist()
+def plot_histograms(df, column, FILE_PATH, type):
+    # change the color of the histograms
+    if type == "cs":
+        color = '#7EA6E0'
+    elif type == "ph":
+        color = '#EA6B66'
+    else:
+        color = '#B266FF'
+
+    # create and label the histograms
+    plt.hist(df[column], color=color, ec=color)
     title_label = "Distribution of  " + str(column)
     plt.title(title_label)
     plt.xlabel(column)
     plt.ylabel("Frequency")
+    if (column == "%_of_cs") or (column == "%_of_ph"):
+        print("here")
+        plt.xlim([30,100])
 
     # save figure
     file_name = str(column) + '_histogram.png'
@@ -130,7 +141,7 @@ def plot_histograms_overall(idealized, cs, ph, researchers, columns_i, columns_c
     plt.clf()
 
     for column in columns_i:
-        plot_histograms(idealized, column, BASE_FP_OUTPUT_I)
+        plot_histograms(idealized, column, BASE_FP_OUTPUT_I, "ideal")
 
     # create cs histograms
     cs.hist()
@@ -139,7 +150,7 @@ def plot_histograms_overall(idealized, cs, ph, researchers, columns_i, columns_c
     plt.clf()
 
     for column in columns_cs:
-        plot_histograms(cs, column, BASE_FP_OUTPUT_CS)
+        plot_histograms(cs, column, BASE_FP_OUTPUT_CS, "cs")
 
     # create ph histograms
     ph.hist()
@@ -148,7 +159,7 @@ def plot_histograms_overall(idealized, cs, ph, researchers, columns_i, columns_c
     plt.clf()
 
     for column in columns_ph:
-        plot_histograms(ph, column, BASE_FP_OUTPUT_PH)
+        plot_histograms(ph, column, BASE_FP_OUTPUT_PH, "ph")
 
     # create researchers histograms
     ph.hist()
@@ -157,7 +168,7 @@ def plot_histograms_overall(idealized, cs, ph, researchers, columns_i, columns_c
     plt.clf()
 
     for column in columns_research:
-        plot_histograms(researchers, column, BASE_FP_OUTPUT_RESEARCH)
+        plot_histograms(researchers, column, BASE_FP_OUTPUT_RESEARCH, "research")
 
 
 ########################################################################################################
@@ -197,16 +208,19 @@ def generate_summary_stats(idealized, cs, ph, researchers):
     columns_i = ['data_source_i', 'class_collection_i', 'random_sample_i', 'replication_i', 'dem_dist_i',
                  'informed_consent_i', 'data_public_i', 'irb_i', 'ground_truth_size_i', 'ground_truth_discussion_i',
                  'limitations_i', 'preprocess_anonymity_i', 'preprocess_drop_i', 'preprocess_missing_values_i',
-                 'preprocess_noise_i', 'preprocess_text_i', 'ethics_section_i', '%_of_idealized']
+                 'preprocess_noise_i', 'preprocess_text_i', 'preprocess_feature_reconstruction_i', 'ethics_section_i',
+                 '%_of_idealized']
     columns_cs = ['data_source_cs', 'class_collection_cs', 'random_sample_cs', 'replication_cs', 'dem_dist_cs',
-                  'irb_cs', 'ground_truth_size_cs', 'ground_truth_discussion_cs', 'preprocess_drop_cs', '%_of_cs']
+                  'irb_cs', 'ground_truth_size_cs', 'ground_truth_discussion_cs', 'preprocess_drop_cs',
+                  'preprocess_feature_reconstruction_cs', '%_of_cs']
     columns_ph = ['data_source_ph', 'class_collection_ph', 'random_sample_ph', 'replication_ph', 'dem_dist_ph',
                   'informed_consent_ph', 'irb_ph', 'ground_truth_size_ph', 'ground_truth_discussion_ph', '%_of_ph']
     columns_research = ['Num_Researchers', 'Choudhury', 'Drezde', 'Coppersmith', 'data_source_i', 'class_collection_i',
                         'random_sample_i', 'replication_i', 'dem_dist_i', 'informed_consent_i', 'data_public_i',
                         'irb_i', 'ground_truth_size_i', 'ground_truth_discussion_i', 'limitations_i',
                         'preprocess_anonymity_i', 'preprocess_drop_i', 'preprocess_missing_values_i',
-                        'preprocess_noise_i', 'preprocess_text_i', 'ethics_section_i', '%_of_idealized']
+                        'preprocess_noise_i', 'preprocess_text_i', 'preprocess_feature_reconstruction_i', 'ethics_section_i',
+                        '%_of_idealized']
 
     # generate summary stats
     idealized_stats = summary_stats_by_df(columns_i, idealized)
@@ -247,13 +261,13 @@ def create_sub_dfs(df):
     idealized = df[['Link to paper', 'Task', 'data_source_i', 'class_collection_i', 'random_sample_i', 'replication_i',
                     'dem_dist_i', 'informed_consent_i', 'data_public_i', 'irb_i', 'ground_truth_size_i',
                     'ground_truth_discussion_i', 'limitations_i', 'preprocess_anonymity_i', 'preprocess_drop_i',
-                    'preprocess_missing_values_i', 'preprocess_noise_i', 'preprocess_text_i', 'ethics_section_i',
-                    '%_of_idealized']].copy()
+                    'preprocess_missing_values_i', 'preprocess_noise_i', 'preprocess_text_i', 'preprocess_feature_reconstruction_i',
+                    'ethics_section_i', '%_of_idealized']].copy()
 
     # create cs df
     cs = df[['Link to paper', 'Task', 'data_source_cs', 'class_collection_cs', 'random_sample_cs', 'replication_cs',
              'dem_dist_cs', 'irb_cs', 'ground_truth_size_cs', 'ground_truth_discussion_cs', 'preprocess_drop_cs',
-             '%_of_cs']].copy()
+             'preprocess_feature_reconstruction_cs', '%_of_cs']].copy()
 
     # create ph df
     ph = df[['Link to paper', 'Task', 'data_source_ph', 'class_collection_ph', 'random_sample_ph', 'replication_ph',
@@ -264,7 +278,8 @@ def create_sub_dfs(df):
                       'random_sample_i', 'replication_i', 'dem_dist_i', 'informed_consent_i', 'data_public_i',
                       'irb_i', 'ground_truth_size_i', 'ground_truth_discussion_i', 'limitations_i',
                       'preprocess_anonymity_i', 'preprocess_drop_i', 'preprocess_missing_values_i',
-                      'preprocess_noise_i', 'preprocess_text_i', 'ethics_section_i', '%_of_idealized']].copy()
+                      'preprocess_noise_i', 'preprocess_text_i', 'preprocess_feature_reconstruction_i', 'ethics_section_i',
+                      '%_of_idealized']].copy()
 
     return idealized, cs, ph, researchers
 
@@ -315,7 +330,6 @@ def create_heatmap(idealized):
     df = df.reindex(df.mean().sort_values(ascending=False).index, axis=1)
     df_list = df.values.tolist()
     fig = go.Figure(data=go.Heatmap(z=df_list, x=df.columns, colorscale='purples'))
-    fig.show()
     fig.write_image(os.path.join(BASE_FP_OUTPUT_VISUALIZATIONS, 'heatmap.png'))
 
 
@@ -327,7 +341,7 @@ def create_heatmap(idealized):
 ########################################################################################################
 def make_visualizations(idealized, cs, ph, researchers):
     # Create Venn diagrams to explain relationship between cs, ph, and idealized norms
-    create_venn()
+    # create_venn()
 
     # Create heatmap to display the paper score breakdown
     # Maybe try with the binned values instead of the individual pieces? if doing binned, scale binned to
@@ -345,12 +359,16 @@ def main():
 
     # open file
     # df = pd.read_csv(f'{BASE_FP}thesis_raw.csv')
-    df = pd.read_csv(f'{BASE_FP}thesis_raw_v2.csv')
+    # df = pd.read_csv(f'{BASE_FP}thesis_raw_v2.csv')
+    df = pd.read_csv(f'{BASE_FP}thesis_raw_v3.csv')
 
+    # create four sub-dataframes for the different definitions/analyses
     idealized, cs, ph, researchers = create_sub_dfs(df)
 
-    #generate_summary_stats(idealized, cs, ph, researchers)
+    # generate summary statistics and basic plots
+    generate_summary_stats(idealized, cs, ph, researchers)
 
+    # create more interesting visualizations
     make_visualizations(idealized, cs, ph, researchers)
 
 
