@@ -44,7 +44,7 @@ This dataset contains the raw data manually compiled from the computer science p
 * **preprocess_feature_reconstruction_i** - score for explanation of feature reconstruction for idealized norm (0-2)
 * **preprocess_i** - binned score for discussion on preprocessing for idealized norm (0-10); sum of preprocess_anonymity_i, preprocess_drop_i, preprocess_missing_values_i, preprocess_noise_i, preprocess_text_i, and preprocess_feature_reconstruction_i
 * **ethics_section_i** - score for inclusion of ethics section for idealized norm (0-2)
-* **$\%$_of_idealized** - score for publication transparency for idealized norm (0-100)
+* **\%_of_idealized** - score for publication transparency for idealized norm (0-100)
 * **data_source_cs** - score for explanation of data source for computer science norm (0-2)
 * **class_collection_cs** - score for discussion on data class collection for computer science norm (0-2)
 * **random_sample_cs** - score for explanation of random sampling for computer science norm (0-2)
@@ -55,7 +55,7 @@ This dataset contains the raw data manually compiled from the computer science p
 * **ground_truth_discussion_cs** - score for ground truth discussion for computer science norm (0-2)
 * **preprocess_drop_cs** - score for explanation of dropped values for computer science norm (0-2)
 * **preprocess_feature_reconstruction_cs** - score for explanation of feature reconstruction for computer science norm (0-2)
-* **$\%$_of_cs** - score for publication transparency for computer science norm (0-100)
+* **\%_of_cs** - score for publication transparency for computer science norm (0-100)
 * **data_source_ph** - score for explanation of data source for public health norm (0-2)
 * **class_collection_ph** - score for discussion on data class collection for public health norm (0-2)
 * **random_sample_ph** - score for explanation of random sampling for public health norm (0-2)
@@ -65,7 +65,7 @@ This dataset contains the raw data manually compiled from the computer science p
 * **irb_ph** - score for explanation of IRB for public health norm (0-2)
 * **ground_truth_size_ph** - score for ground truth size for public health norm (0-2)
 * **ground_truth_discussion_ph** - score for ground truth discussion for public health norm (0-2)
-* **$\%$_of_ph** - score for publication transparency for public health norm (0-100)
+* **\%_of_ph** - score for publication transparency for public health norm (0-100)
 
 # Python Files
 
@@ -75,7 +75,7 @@ This program will read in the most-updated, raw dataset (currently [thesis_raw_v
 # Output Files and Visualizations
 
 ### [Idealized](/output/eda/idealized)
-* **$\%$_of_idealized_histogram.png** - histogram measuring frequency of the publications with each idealized score
+* **\%_of_idealized_histogram.png** - histogram measuring frequency of the publications with each idealized score
 * **boxplot_i_histogram.png** - boxplot of the distribution of the computer science scores for each of the publications
 * **class_collection_i_histogram.png** - histogram measuring frequency of the publications with each class_collection idealized score
 * **data_public_i_histogram.png** - histogram measuring the frequency of the number of publications with each data_public idealized score
@@ -99,7 +99,7 @@ This program will read in the most-updated, raw dataset (currently [thesis_raw_v
 * **idealized_summary_stats.csv** - text file containing count, mean, standard deviation, min, 25th percentile, median, 75th percentile, and max for each of the attributes
 
 ### [Computer Science](/output/eda/cs)
-* **$\%$_of_cs_histogram.png** - histogram measuring frequency of the publications with each computer science score
+* **\%_of_cs_histogram.png** - histogram measuring frequency of the publications with each computer science score
 * **boxplot_cs.png** - boxplot of the distribution of the computer science scores for each of the publications
 * **histograms_cs.png** - histogram matrix of all feature histograms
 * **class_collection_cs_histogram.png** - histogram measuring frequency of the publications with each class_collection computer science score
@@ -115,7 +115,7 @@ This program will read in the most-updated, raw dataset (currently [thesis_raw_v
 * **cs_summary_stats.csv** - text file containing count, mean, standard deviation, min, 25th percentile, median, 75th percentile, and max for each of the attributes
 
 ### [Public Health](/output/eda/ph)
-* **$\%$_of_ph_histogram.png** - histogram measuring frequency of the publications with each public health score
+* **\%_of_ph_histogram.png** - histogram measuring frequency of the publications with each public health score
 * **boxplot_ph.png** - boxplot of the distribution of the public health scores for each of the publications
 * **histograms_ph.png** - histogram matrix of all feature histograms
 * **class_collection_ph_histogram.png** - histogram measuring frequency of the publications with each class_collection public health score
@@ -134,7 +134,7 @@ This program will read in the most-updated, raw dataset (currently [thesis_raw_v
 * **Drezde_histogram.png** - histogram of scores for publications authored by Drezde according to the idealized score
 * **Coppersmith_histogram.png** - histogram of scores for publications authored by Coppersmith according to the idealized score
 * **Num_Researchers_histogram.png** - histogram measuring frequency of the number of researchers per publication
-* **$\%$_of_idealized_histogram.png** - histogram measuring frequency of the publications with each idealized score
+* **\%_of_idealized_histogram.png** - histogram measuring frequency of the publications with each idealized score
 * **class_collection_i_histogram.png** - histogram measuring frequency of the publications with each class_collection idealized score
 * **comp_boxplots_researchers.png** - comparative boxplots of the distributions of idealized scores for De Choudhury's, Drezde's, and Coppersmith's publications
 * **comp_hists_researchers.png** - comparative histograms of the distributions of the idealized scores for De Choudhury's, Drezde's, and Coppersmith's publications
