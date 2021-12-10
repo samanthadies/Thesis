@@ -4,6 +4,7 @@
 This repository contains python files used to perform exploratory data analysis on a dataset manually compiled from comupter science publications. With the data in the repository, we aim to
 
 **1.** Quantify the ethical value of transparency as it relates to two parts of the data science life cycle -  data collection and preprocessing - in order to develop guidelines/best practices for computer science research on mental health using social media data.
+
 **2.** Develop a semi-supervised model for transparency modeling that scores publications on how well they adhere to the defined normative behavior for full transparency.
 
 # Main Dataset Descriptions
