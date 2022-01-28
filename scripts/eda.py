@@ -14,6 +14,7 @@ from matplotlib_venn import venn3
 from matplotlib_venn_wordcloud import venn3_wordcloud
 import plotly.express as px
 import plotly.graph_objects as go
+import warnings
 
 BASE_FP = '../data/'
 BASE_FP_OUTPUT_I = '../output/eda/idealized/'
@@ -37,13 +38,19 @@ def researcher_plots(researchers):
     for item in df_choudhury['%_of_idealized']:
         researchers_dict['Choudhury'].append(item)
 
+    print("Mean DC: ", df_choudhury['%_of_idealized'].mean())
+
     df_drezde = researchers[researchers['Drezde'] == 1]
     for item in df_drezde['%_of_idealized']:
         researchers_dict['Drezde'].append(item)
 
+    print("Mean D: ", df_drezde['%_of_idealized'].mean())
+
     df_coppersmith = researchers[researchers['Coppersmith'] == 1]
     for item in df_coppersmith['%_of_idealized']:
         researchers_dict['Coppersmith'].append(item)
+
+    print("Mean C: ", df_coppersmith['%_of_idealized'].mean())
 
     fig, ax = plt.subplots()
     ax.boxplot(researchers_dict.values())
@@ -114,7 +121,6 @@ def plot_histograms(df, column, FILE_PATH, type):
     plt.xlabel(column)
     plt.ylabel("Frequency")
     if (column == "%_of_cs") or (column == "%_of_ph"):
-        print("here")
         plt.xlim([30,100])
 
     # save figure
@@ -357,10 +363,17 @@ def make_visualizations(idealized, cs, ph, researchers):
 ########################################################################################################
 def main():
 
+    warnings.filterwarnings('ignore')
+
     # open file
     # df = pd.read_csv(f'{BASE_FP}thesis_raw.csv')
     # df = pd.read_csv(f'{BASE_FP}thesis_raw_v2.csv')
-    df = pd.read_csv(f'{BASE_FP}thesis_raw_v3.csv')
+    # df = pd.read_csv(f'{BASE_FP}thesis_raw_v3.csv')
+    df = pd.read_csv(f'{BASE_FP}thesis_raw_v4.csv')
+
+    for index, value in df['%_of_idealized'].items():
+        if value > 100:
+            df['%_of_idealized'][index] = 100
 
     # create four sub-dataframes for the different definitions/analyses
     idealized, cs, ph, researchers = create_sub_dfs(df)
@@ -369,7 +382,7 @@ def main():
     generate_summary_stats(idealized, cs, ph, researchers)
 
     # create more interesting visualizations
-    make_visualizations(idealized, cs, ph, researchers)
+    #make_visualizations(idealized, cs, ph, researchers)
 
 
 if __name__ == '__main__':
