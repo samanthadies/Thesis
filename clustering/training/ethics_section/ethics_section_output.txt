@@ -1,0 +1,350 @@
+Run 1
+
+Cluster  0:
+ feature
+ data
+ depression
+ user
+ discussion
+ model
+ introduction
+ abstract introduction
+ analysis
+ tweet
+Cluster  1:
+ health
+ difference
+ mental
+ mental health
+ analysis
+ data
+ selfdisclosure
+ gender
+ expression
+ depression
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6428571428571429
+Score 1 accuracy: 0.4166666666666667
+
+Incorrectly identified: [3, 9, 16, 17, 25, 1, 11, 15, 20, 21, 23, 24]
+
+__________________________________________________
+
+Run 2
+
+Cluster  0:
+ data
+ classification
+ analysis
+ difference
+ selfdisclosure
+ gender
+ discussion
+ collection
+ data collection
+ word
+Cluster  1:
+ health
+ social
+ depression
+ mental
+ data
+ mental health
+ feature
+ support
+ visual
+ analysis
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6428571428571429
+Score 1 accuracy: 0.5833333333333334
+
+Incorrectly identified: [2, 6, 17, 22, 25, 11, 15, 18, 19, 23]
+
+__________________________________________________
+
+Run 3
+
+Cluster  0:
+ depression
+ difference
+ health
+ mental
+ data
+ mental health
+ selfdisclosure
+ gender
+ social
+ expression
+Cluster  1:
+ feature
+ classification
+ analysis
+ data
+ visual
+ word
+ emotion
+ model
+ clustering
+ method
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.7857142857142857
+Score 1 accuracy: 0.5
+
+Incorrectly identified: [6, 9, 17, 0, 1, 11, 19, 20, 23]
+
+__________________________________________________
+
+Run 4
+
+Cluster  0:
+ depression
+ analysis
+ marker
+ word
+ feature
+ data
+ classification
+ discussion
+ topic
+ result
+Cluster  1:
+ health
+ social
+ difference
+ data
+ mental
+ gender
+ mental health
+ selfdisclosure
+ social medium
+ medium
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.6428571428571429
+Score 1 accuracy: 0.6666666666666666
+
+Incorrectly identified: [2, 8, 9, 13, 14, 0, 4, 21, 24]
+
+__________________________________________________
+
+Run 5
+
+Cluster  0:
+ feature
+ data
+ classification
+ gender
+ difference
+ analysis
+ feature extraction
+ extraction
+ health
+ mental
+Cluster  1:
+ depression
+ social
+ selfdisclosure
+ health
+ data
+ analysis
+ discussion
+ theme
+ mental
+ result
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6428571428571429
+Score 1 accuracy: 0.5
+
+Incorrectly identified: [3, 6, 9, 12, 17, 1, 11, 15, 19, 21, 24]
+
+__________________________________________________
+
+Run 6
+
+Cluster  0:
+ health
+ difference
+ social
+ mental
+ mental health
+ selfdisclosure
+ data
+ analysis
+ gender
+ medium
+Cluster  1:
+ depression
+ feature
+ data
+ classification
+ marker
+ analysis
+ method data
+ result
+ tweet
+ method data collection
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.5714285714285714
+Score 1 accuracy: 0.6666666666666666
+
+Incorrectly identified: [2, 8, 12, 13, 14, 25, 0, 4, 10, 21]
+
+__________________________________________________
+
+Run 7
+
+Cluster  0:
+ word
+ machine
+ analysis
+ health
+ classifier
+ discussion
+ clustering
+ depression
+ condition
+ marker
+Cluster  1:
+ data
+ difference
+ mental
+ social
+ depression
+ feature
+ classification
+ analysis
+ health
+ selfdisclosure
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.35714285714285715
+Score 1 accuracy: 0.75
+
+Incorrectly identified: [2, 3, 6, 8, 9, 12, 14, 16, 22, 4, 11, 24]
+
+__________________________________________________
+
+Run 8
+
+Cluster  0:
+ feature
+ classification
+ depression
+ data
+ marker
+ data collection
+ collection
+ method data
+ tweet
+ method data collection
+Cluster  1:
+ health
+ social
+ difference
+ mental
+ mental health
+ data
+ analysis
+ selfdisclosure
+ gender
+ work
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.42857142857142855
+Score 1 accuracy: 0.5833333333333334
+
+Incorrectly identified: [2, 3, 5, 8, 12, 13, 14, 25, 0, 1, 4, 10, 21]
+
+__________________________________________________
+
+Run 9
+
+Cluster  0:
+ classification
+ analysis
+ tweet
+ user
+ discussion
+ data
+ symptom
+ abstract
+ method
+ discussion tree
+Cluster  1:
+ health
+ data
+ mental
+ difference
+ depression
+ feature
+ mental health
+ social
+ gender
+ selfdisclosure
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.7857142857142857
+Score 1 accuracy: 0.3333333333333333
+
+Incorrectly identified: [6, 16, 25, 0, 1, 4, 11, 15, 18, 20, 23]
+
+__________________________________________________
+
+Run 10
+
+Cluster  0:
+ difference
+ social
+ mental
+ health
+ mental health
+ gender
+ analysis
+ depression
+ visual
+ social medium
+Cluster  1:
+ data
+ feature
+ classification
+ depression
+ marker
+ data collection
+ collection
+ result
+ selfdisclosure
+ analysis
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6428571428571429
+Score 1 accuracy: 0.5833333333333334
+
+Incorrectly identified: [5, 8, 14, 16, 25, 0, 1, 4, 10, 21]
+
+__________________________________________________
+

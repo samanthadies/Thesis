@@ -1,0 +1,350 @@
+Run 1
+
+Cluster  0:
+ data
+ wa
+ institutional
+ institutional review
+ institutional review board
+ approval
+ user
+ board
+ review
+ review board
+Cluster  1:
+ post
+ user
+ tweet
+ twitter
+ community
+ health
+ depression
+ comment
+ subreddits
+ disorder
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.75
+Score 1 accuracy: 0.6
+
+Incorrectly identified: [1, 10, 18, 20, 3, 5, 7, 19]
+
+__________________________________________________
+
+Run 2
+
+Cluster  0:
+ survey
+ review
+ approval
+ institutional
+ institutional review
+ institutional review board
+ review board
+ board
+ wa
+ information
+Cluster  1:
+ user
+ post
+ tweet
+ community
+ data
+ depression
+ twitter
+ comment
+ health
+ subreddits
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6875
+Score 1 accuracy: 0.5
+
+Incorrectly identified: [1, 10, 13, 18, 20, 3, 5, 11, 19, 22]
+
+__________________________________________________
+
+Run 3
+
+Cluster  0:
+ institutional
+ institutional review
+ institutional review board
+ approval
+ board
+ review
+ review board
+ ethic
+ data
+ work
+Cluster  1:
+ user
+ post
+ tweet
+ depression
+ participant
+ community
+ twitter
+ health
+ wa
+ survey
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.75
+Score 1 accuracy: 0.4
+
+Incorrectly identified: [1, 10, 18, 20, 0, 3, 5, 7, 19, 22]
+
+__________________________________________________
+
+Run 4
+
+Cluster  0:
+ post
+ community
+ subreddits
+ comment
+ journal
+ user
+ ethic approval consent
+ approval consent
+ participate applicable
+ consent participate
+Cluster  1:
+ user
+ tweet
+ wa
+ data
+ participant
+ twitter
+ survey
+ depression
+ information
+ disorder
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.375
+Score 1 accuracy: 0.9
+
+Incorrectly identified: [1, 9, 10, 13, 15, 16, 17, 18, 20, 21, 24]
+
+__________________________________________________
+
+Run 5
+
+Cluster  0:
+ user
+ post
+ data
+ wa
+ subreddits
+ mental
+ health
+ comment
+ work
+ disorder
+Cluster  1:
+ participant
+ depression
+ survey
+ tweet
+ community
+ respondent
+ twitter
+ participate
+ participate applicable
+ approval consent
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.8125
+Score 1 accuracy: 0.5
+
+Incorrectly identified: [6, 13, 21, 4, 5, 19, 22, 23]
+
+__________________________________________________
+
+Run 6
+
+Cluster  0:
+ user
+ data
+ disorder
+ work
+ twitter
+ wa
+ tweet
+ institutional
+ institutional review
+ institutional review board
+Cluster  1:
+ post
+ user
+ subreddits
+ depression
+ community
+ tweet
+ comment
+ participant
+ journal
+ wa
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.5625
+Score 1 accuracy: 0.5
+
+Incorrectly identified: [1, 9, 15, 16, 17, 18, 20, 3, 5, 7, 22, 24]
+
+__________________________________________________
+
+Run 7
+
+Cluster  0:
+ community
+ approval consent
+ consent participate applicable
+ participate applicable
+ approval consent participate
+ ethic approval
+ ethic approval consent
+ applicable
+ consent participate
+ participate
+Cluster  1:
+ user
+ post
+ tweet
+ data
+ wa
+ twitter
+ health
+ subreddits
+ information
+ mental
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.9375
+Score 1 accuracy: 0.2
+
+Incorrectly identified: [6, 3, 4, 5, 7, 11, 19, 22, 23]
+
+__________________________________________________
+
+Run 8
+
+Cluster  0:
+ consent
+ participate applicable
+ consent participate
+ consent participate applicable
+ applicable
+ ethic approval consent
+ ethic approval
+ approval consent participate
+ approval consent
+ approval
+Cluster  1:
+ user
+ post
+ tweet
+ twitter
+ participant
+ depression
+ data
+ wa
+ community
+ health
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.9375
+Score 1 accuracy: 0.3
+
+Incorrectly identified: [18, 0, 3, 4, 5, 7, 19, 22]
+
+__________________________________________________
+
+Run 9
+
+Cluster  0:
+ post
+ survey
+ wa
+ user
+ data
+ respondent
+ consent
+ information
+ ethic
+ participate
+Cluster  1:
+ user
+ tweet
+ post
+ twitter
+ community
+ disorder
+ comment
+ data
+ depression
+ subreddits
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6875
+Score 1 accuracy: 0.6
+
+Incorrectly identified: [1, 2, 8, 13, 18, 3, 4, 5, 19]
+
+__________________________________________________
+
+Run 10
+
+Cluster  0:
+ post
+ work
+ institutional
+ institutional review board
+ institutional review
+ approval
+ review
+ review board
+ board
+ ethic
+Cluster  1:
+ user
+ tweet
+ post
+ depression
+ participant
+ community
+ twitter
+ data
+ survey
+ wa
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.375
+Score 1 accuracy: 0.7
+
+Incorrectly identified: [2, 6, 9, 12, 13, 14, 16, 17, 21, 25, 4, 23, 24]
+
+__________________________________________________
+

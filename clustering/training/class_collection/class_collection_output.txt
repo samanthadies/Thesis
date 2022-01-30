@@ -1,0 +1,350 @@
+Run 1
+
+Cluster  0:
+ tweet
+ user
+ word
+ age
+ depressive
+ attempt
+ twitter
+ depression
+ suicide attempt
+ personality
+Cluster  1:
+ post
+ user
+ participant
+ health
+ mental
+ subreddits
+ twitter
+ data
+ mental health
+ depression
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.11538461538461539
+
+Incorrectly identified: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 22, 23, 24, 25]
+
+__________________________________________________
+
+Run 2
+
+Cluster  0:
+ post
+ user
+ subreddits
+ comment
+ health
+ participant
+ mental health
+ mental
+ post comment
+ sw
+Cluster  1:
+ user
+ tweet
+ twitter
+ depression
+ community
+ disorder
+ data
+ participant
+ post
+ mental
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.46153846153846156
+
+Incorrectly identified: [0, 4, 6, 9, 12, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+
+__________________________________________________
+
+Run 3
+
+Cluster  0:
+ post
+ user
+ subreddits
+ health
+ comment
+ mental
+ mental health
+ community
+ sw
+ data
+Cluster  1:
+ user
+ participant
+ tweet
+ twitter
+ depression
+ questionnaire
+ wa
+ data
+ history
+ disorder
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.6153846153846154
+
+Incorrectly identified: [0, 3, 4, 5, 9, 17, 19, 21, 22, 23]
+
+__________________________________________________
+
+Run 4
+
+Cluster  0:
+ post
+ subreddits
+ user
+ comment
+ health
+ mental
+ mental health
+ sw
+ topic
+ subreddit
+Cluster  1:
+ user
+ twitter
+ participant
+ tweet
+ depression
+ community
+ post
+ wa
+ data
+ control
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.5
+
+Incorrectly identified: [0, 3, 4, 6, 7, 9, 11, 13, 17, 19, 20, 21, 22]
+
+__________________________________________________
+
+Run 5
+
+Cluster  0:
+ post
+ user
+ subreddits
+ mental
+ mental health
+ comment
+ health
+ data
+ community
+ disorder
+Cluster  1:
+ tweet
+ twitter
+ participant
+ user
+ depression
+ condition
+ questionnaire
+ wa
+ schizophrenia
+ health
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.6923076923076923
+
+Incorrectly identified: [3, 4, 7, 13, 16, 17, 19, 21]
+
+__________________________________________________
+
+Run 6
+
+Cluster  0:
+ participant
+ tweet
+ twitter
+ depression
+ questionnaire
+ history
+ user
+ score
+ handle
+ depressive
+Cluster  1:
+ user
+ post
+ mental
+ subreddits
+ health
+ mental health
+ data
+ comment
+ community
+ disorder
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.15384615384615385
+
+Incorrectly identified: [0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 22, 23, 24, 25]
+
+__________________________________________________
+
+Run 7
+
+Cluster  0:
+ user
+ post
+ twitter
+ tweet
+ participant
+ depression
+ data
+ suicide
+ wa
+ community
+Cluster  1:
+ post
+ subreddits
+ mental
+ mental health
+ health
+ disorder
+ user
+ identity
+ comment
+ topic
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.6923076923076923
+
+Incorrectly identified: [0, 2, 8, 9, 12, 14, 15, 23]
+
+__________________________________________________
+
+Run 8
+
+Cluster  0:
+ tweet
+ handle
+ condition
+ health
+ twitter
+ tweet health
+ post
+ doctor nutrition drsnutritionetx
+ focused handle health
+ focused handle
+Cluster  1:
+ user
+ post
+ participant
+ mental
+ depression
+ twitter
+ subreddits
+ data
+ mental health
+ tweet
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.07692307692307693
+
+Incorrectly identified: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+
+__________________________________________________
+
+Run 9
+
+Cluster  0:
+ post
+ community
+ subreddits
+ comment
+ mental health
+ livejournal
+ health
+ control
+ statistic
+ mental
+Cluster  1:
+ user
+ post
+ twitter
+ tweet
+ participant
+ depression
+ data
+ mental
+ health
+ wa
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.11538461538461539
+
+Incorrectly identified: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+
+__________________________________________________
+
+Run 10
+
+Cluster  0:
+ community
+ identity
+ cultural
+ photo
+ user
+ instagram
+ participant
+ depression
+ clinical
+ livejournal
+Cluster  1:
+ user
+ post
+ tweet
+ twitter
+ subreddits
+ health
+ mental
+ participant
+ mental health
+ data
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: -1
+Score 1 accuracy: 0.15384615384615385
+
+Incorrectly identified: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25]
+
+__________________________________________________
+
