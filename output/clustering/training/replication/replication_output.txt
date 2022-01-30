@@ -1,0 +1,350 @@
+Run 1
+
+Cluster  0:
+ associated study
+ code associated
+ study available publicly
+ available publicly
+ available publicly github
+ httpsgithubcomandrewreecepredicthealth
+ associated study available
+ study available
+ github page
+ page agr httpsgithubcomandrewreecepredicthealth
+Cluster  1:
+ post
+ user
+ tweet
+ data
+ subreddits
+ participant
+ twitter
+ depression
+ mental
+ comment
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 1.0
+Score 1 accuracy: 0.1
+
+Incorrectly identified: [1, 2, 4, 6, 8, 11, 12, 13, 14, 15, 16, 17, 18, 20, 21, 23, 24, 25]
+
+__________________________________________________
+
+Run 2
+
+Cluster  0:
+ post
+ user
+ subreddits
+ comment
+ tweet
+ community
+ twitter
+ mental
+ data
+ mental health
+Cluster  1:
+ user
+ data
+ university
+ word
+ tweet
+ participant
+ wa
+ weibo
+ survey
+ analysis
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6666666666666666
+Score 1 accuracy: 0.7
+
+Incorrectly identified: [3, 19, 4, 8, 11, 16, 17, 23]
+
+__________________________________________________
+
+Run 3
+
+Cluster  0:
+ post
+ participant
+ data
+ subreddits
+ study
+ score
+ comment
+ health
+ user
+ depression
+Cluster  1:
+ user
+ post
+ tweet
+ word
+ community
+ twitter
+ journal
+ selfdisclosure
+ data
+ control
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6666666666666666
+Score 1 accuracy: 0.6
+
+Incorrectly identified: [3, 7, 2, 6, 12, 17, 20, 21, 24, 25]
+
+__________________________________________________
+
+Run 4
+
+Cluster  0:
+ post
+ subreddits
+ comment
+ user
+ community
+ data
+ reddit
+ participant
+ journal
+ post comment
+Cluster  1:
+ user
+ tweet
+ twitter
+ data
+ word
+ disorder
+ condition
+ post
+ sample
+ mental
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6666666666666666
+Score 1 accuracy: 0.55
+
+Incorrectly identified: [3, 7, 4, 11, 13, 15, 16, 17, 20, 21, 23]
+
+__________________________________________________
+
+Run 5
+
+Cluster  0:
+ user
+ tweet
+ participant
+ twitter
+ post
+ depression
+ data
+ wa
+ word
+ disorder
+Cluster  1:
+ post
+ subreddits
+ comment
+ community
+ data
+ user
+ post comment
+ reddit
+ mental health
+ selfdisclosure
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 1.0
+Score 1 accuracy: 0.5
+
+Incorrectly identified: [0, 4, 11, 12, 13, 15, 16, 17, 20, 21]
+
+__________________________________________________
+
+Run 6
+
+Cluster  0:
+ post
+ user
+ tweet
+ subreddits
+ depression
+ twitter
+ comment
+ mental
+ data
+ community
+Cluster  1:
+ university
+ data
+ participant
+ study
+ information
+ student
+ personal
+ available
+ associated study available
+ study available
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 1.0
+Score 1 accuracy: 0.25
+
+Incorrectly identified: [1, 2, 6, 12, 13, 14, 15, 16, 17, 18, 20, 21, 23, 24, 25]
+
+__________________________________________________
+
+Run 7
+
+Cluster  0:
+ tweet
+ user
+ participant
+ depression
+ twitter
+ word
+ wa
+ data
+ community
+ condition
+Cluster  1:
+ post
+ subreddits
+ comment
+ user
+ mental health
+ mental
+ data
+ reddit
+ health
+ journal
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 1.0
+Score 1 accuracy: 0.6
+
+Incorrectly identified: [0, 4, 6, 11, 13, 16, 17, 21]
+
+__________________________________________________
+
+Run 8
+
+Cluster  0:
+ user
+ tweet
+ disorder
+ word
+ patient
+ wa
+ data
+ depression
+ total
+ spanish
+Cluster  1:
+ post
+ user
+ participant
+ subreddits
+ data
+ health
+ community
+ mental
+ twitter
+ mental health
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.6666666666666666
+Score 1 accuracy: 0.9
+
+Incorrectly identified: [3, 7, 21, 25]
+
+__________________________________________________
+
+Run 9
+
+Cluster  0:
+ participant
+ study
+ information
+ data
+ personal
+ questionnaire
+ github page
+ study available
+ page agr httpsgithubcomandrewreecepredicthealth
+ github page agr
+Cluster  1:
+ post
+ user
+ tweet
+ subreddits
+ data
+ comment
+ mental
+ community
+ twitter
+ mental health
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.8333333333333334
+Score 1 accuracy: 0.2
+
+Incorrectly identified: [3, 1, 2, 6, 8, 12, 13, 14, 15, 16, 17, 18, 20, 21, 23, 24, 25]
+
+__________________________________________________
+
+Run 10
+
+Cluster  0:
+ post
+ user
+ data
+ subreddits
+ health
+ mental
+ mental health
+ disorder
+ tweet
+ selfdisclosure
+Cluster  1:
+ post
+ user
+ word
+ community
+ tweet
+ depression
+ participant
+ journal
+ wa
+ twitter
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.5
+Score 1 accuracy: 0.65
+
+Incorrectly identified: [9, 19, 22, 6, 12, 17, 18, 21, 24, 25]
+
+__________________________________________________
+

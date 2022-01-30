@@ -1,0 +1,350 @@
+Run 1
+
+Cluster  0:
+ word
+ topic
+ tweet
+ user
+ used
+ depression
+ journal
+ matrix
+ feature
+ post
+Cluster  1:
+ user
+ post
+ image
+ mental
+ tweet
+ health
+ category
+ word
+ data
+ mental health
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.25
+Score 1 accuracy: 0.7857142857142857
+
+Incorrectly identified: [4, 7, 8, 14, 16, 17, 22, 23, 25, 3, 12, 24]
+
+__________________________________________________
+
+Run 2
+
+Cluster  0:
+ word
+ tweet
+ user
+ used
+ post
+ wa
+ depression
+ data
+ total
+ rmn
+Cluster  1:
+ topic
+ user
+ tweet
+ mental
+ word
+ post
+ health
+ use
+ mental health
+ feature
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.4166666666666667
+Score 1 accuracy: 0.7857142857142857
+
+Incorrectly identified: [4, 6, 8, 14, 16, 17, 23, 0, 3, 24]
+
+__________________________________________________
+
+Run 3
+
+Cluster  0:
+ user
+ tweet
+ depression
+ data
+ analysis
+ score
+ used
+ wa
+ identity
+ word
+Cluster  1:
+ word
+ topic
+ post
+ category
+ health
+ mental
+ image
+ used
+ comment
+ feature
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.5833333333333334
+Score 1 accuracy: 0.7142857142857143
+
+Incorrectly identified: [6, 7, 8, 14, 25, 0, 9, 11, 19]
+
+__________________________________________________
+
+Run 4
+
+Cluster  0:
+ tweet
+ depression
+ user
+ score
+ item
+ character
+ schizophrenic
+ twitter
+ ddep
+ klout
+Cluster  1:
+ word
+ user
+ topic
+ post
+ used
+ image
+ mental
+ feature
+ tweet
+ category
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.3333333333333333
+Score 1 accuracy: 0.9285714285714286
+
+Incorrectly identified: [6, 7, 8, 10, 14, 22, 23, 25, 5]
+
+__________________________________________________
+
+Run 5
+
+Cluster  0:
+ word
+ user
+ tweet
+ topic
+ post
+ used
+ feature
+ depression
+ image
+ mental
+Cluster  1:
+ celebrity
+ page
+ wikipedia
+ survey
+ view
+ suicide
+ celebrity suicide
+ page view
+ wikipedia page
+ cesd
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.08333333333333333
+Score 1 accuracy: 0.9285714285714286
+
+Incorrectly identified: [6, 7, 8, 10, 14, 16, 17, 21, 22, 23, 25, 18]
+
+__________________________________________________
+
+Run 6
+
+Cluster  0:
+ word
+ topic
+ feature
+ post
+ category
+ tweet
+ used
+ depression
+ user
+ journal
+Cluster  1:
+ user
+ tweet
+ image
+ data
+ health
+ word
+ mental
+ post
+ analysis
+ mental health
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.6666666666666666
+Score 1 accuracy: 0.5
+
+Incorrectly identified: [4, 6, 7, 14, 0, 11, 13, 15, 18, 19, 20]
+
+__________________________________________________
+
+Run 7
+
+Cluster  0:
+ tweet
+ user
+ word
+ topic
+ depression
+ feature
+ used
+ image
+ use
+ analysis
+Cluster  1:
+ word
+ post
+ category
+ measure
+ comment
+ data
+ rank
+ mental
+ health
+ difference
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.5
+Score 1 accuracy: 0.5714285714285714
+
+Incorrectly identified: [6, 16, 17, 21, 22, 23, 0, 1, 13, 18, 20, 24]
+
+__________________________________________________
+
+Run 8
+
+Cluster  0:
+ image
+ user
+ tweet
+ score
+ depression
+ data
+ rank
+ measure
+ celebrity
+ word
+Cluster  1:
+ word
+ user
+ tweet
+ post
+ topic
+ feature
+ used
+ mental
+ comment
+ mental health
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.5833333333333334
+Score 1 accuracy: 0.5
+
+Incorrectly identified: [4, 7, 16, 17, 22, 1, 2, 3, 9, 11, 12, 24]
+
+__________________________________________________
+
+Run 9
+
+Cluster  0:
+ word
+ tweet
+ topic
+ user
+ post
+ depression
+ used
+ comment
+ wa
+ category
+Cluster  1:
+ user
+ image
+ mental
+ health
+ mental health
+ post
+ feature
+ tweet
+ use
+ data
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.5833333333333334
+Score 1 accuracy: 0.7142857142857143
+
+Incorrectly identified: [4, 8, 14, 17, 23, 1, 3, 12, 24]
+
+__________________________________________________
+
+Run 10
+
+Cluster  0:
+ tweet
+ depression
+ user
+ twitter
+ rank
+ mental
+ analysis
+ identity
+ use
+ word
+Cluster  1:
+ word
+ user
+ post
+ topic
+ image
+ feature
+ used
+ tweet
+ comment
+ data
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.4166666666666667
+Score 1 accuracy: 0.6428571428571429
+
+Incorrectly identified: [6, 7, 8, 10, 17, 22, 25, 11, 13, 18, 19, 20]
+
+__________________________________________________
+

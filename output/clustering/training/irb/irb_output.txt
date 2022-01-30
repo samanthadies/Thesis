@@ -1,0 +1,350 @@
+Run 1
+
+Cluster  0:
+ study
+ institutional
+ institutional review
+ institutional review board
+ university
+ approved
+ review
+ review board
+ board
+ board approval
+Cluster  1:
+ user
+ post
+ subreddits
+ data
+ community
+ comment
+ mental
+ wa
+ information
+ work
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 1.0
+Score 1 accuracy: 0.38461538461538464
+
+Incorrectly identified: [1, 3, 7, 10, 15, 17, 18, 20]
+
+__________________________________________________
+
+Run 2
+
+Cluster  0:
+ user
+ post
+ subreddits
+ community
+ comment
+ journal
+ participant
+ mental
+ depression
+ al
+Cluster  1:
+ university
+ review
+ institutional review board
+ institutional
+ institutional review
+ study
+ board
+ review board
+ data
+ post
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.7692307692307693
+Score 1 accuracy: 0.8461538461538461
+
+Incorrectly identified: [8, 13, 24, 3, 17]
+
+__________________________________________________
+
+Run 3
+
+Cluster  0:
+ user
+ wa
+ data
+ patient
+ wa approved
+ approved
+ disorder
+ information
+ additionally
+ study wa
+Cluster  1:
+ post
+ user
+ subreddits
+ university
+ data
+ twitter
+ community
+ study
+ health
+ participant
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.3076923076923077
+Score 1 accuracy: 0.6923076923076923
+
+Incorrectly identified: [2, 6, 8, 11, 12, 13, 14, 19, 24, 1, 18, 21, 23]
+
+__________________________________________________
+
+Run 4
+
+Cluster  0:
+ wa
+ study
+ survey
+ review
+ participant
+ approved
+ institutional review
+ institutional review board
+ institutional
+ board
+Cluster  1:
+ post
+ user
+ subreddits
+ community
+ comment
+ data
+ mental
+ reddit
+ journal
+ health
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.7692307692307693
+Score 1 accuracy: 0.6153846153846154
+
+Incorrectly identified: [13, 19, 22, 10, 15, 17, 18, 20]
+
+__________________________________________________
+
+Run 5
+
+Cluster  0:
+ study
+ review
+ institutional review board
+ institutional review
+ institutional
+ review board
+ board
+ approval
+ university
+ approved
+Cluster  1:
+ user
+ post
+ subreddits
+ data
+ community
+ comment
+ information
+ health
+ mental
+ wa
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 1.0
+Score 1 accuracy: 0.5384615384615384
+
+Incorrectly identified: [1, 3, 10, 15, 17, 18]
+
+__________________________________________________
+
+Run 6
+
+Cluster  0:
+ university
+ study
+ review
+ institutional
+ institutional review
+ institutional review board
+ board
+ review board
+ data
+ wa
+Cluster  1:
+ user
+ post
+ subreddits
+ community
+ comment
+ journal
+ mental
+ data
+ post comment
+ control
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.7692307692307693
+Score 1 accuracy: 0.9230769230769231
+
+Incorrectly identified: [8, 13, 19, 17]
+
+__________________________________________________
+
+Run 7
+
+Cluster  0:
+ user
+ post
+ subreddits
+ data
+ community
+ comment
+ health
+ information
+ participant
+ twitter
+Cluster  1:
+ study
+ review
+ institutional
+ institutional review
+ institutional review board
+ review board
+ board
+ approved
+ wa
+ approval
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 1.0
+Score 1 accuracy: 0.6153846153846154
+
+Incorrectly identified: [3, 10, 15, 17, 18]
+
+__________________________________________________
+
+Run 8
+
+Cluster  0:
+ wa
+ user
+ study
+ review
+ institutional
+ institutional review
+ institutional review board
+ review board
+ board
+ approval
+Cluster  1:
+ post
+ subreddits
+ user
+ comment
+ community
+ reddit
+ data
+ mental
+ health
+ journal
+
+
+
+c0 - present, c1 - absent
+Score 0 accuracy: 0.7692307692307693
+Score 1 accuracy: 0.7692307692307693
+
+Incorrectly identified: [5, 19, 22, 1, 10, 20]
+
+__________________________________________________
+
+Run 9
+
+Cluster  0:
+ user
+ post
+ subreddits
+ community
+ comment
+ data
+ participant
+ twitter
+ health
+ mental
+Cluster  1:
+ study
+ review
+ institutional review
+ institutional
+ institutional review board
+ review board
+ board
+ wa
+ approval
+ university
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 1.0
+Score 1 accuracy: 0.7692307692307693
+
+Incorrectly identified: [3, 15, 17]
+
+__________________________________________________
+
+Run 10
+
+Cluster  0:
+ post
+ user
+ subreddits
+ comment
+ community
+ journal
+ mental
+ post comment
+ word
+ control
+Cluster  1:
+ university
+ wa
+ data
+ study
+ user
+ review
+ institutional review board
+ institutional
+ institutional review
+ board
+
+
+
+c0 - absent, c1 - present
+Score 0 accuracy: 0.6153846153846154
+Score 1 accuracy: 0.9230769230769231
+
+Incorrectly identified: [8, 11, 13, 19, 22, 17]
+
+__________________________________________________
+
