@@ -1,0 +1,10 @@
+noise
+noisy
+genuine
+unreliable
+nonsensical
+sarcastic
+sarcasm
+joke
+jokes
+disingenuous
