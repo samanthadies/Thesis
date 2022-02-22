@@ -1,0 +1,21 @@
+informed_consent topic distribution for documents in class 1:
+count    10.000000
+mean      0.153228
+std       0.026315
+min       0.107692
+25%       0.139541
+50%       0.154419
+75%       0.163392
+max       0.192308
+Name: informed_consent, dtype: float64
+
+informed_consent topic distribution for documents in class 0:
+count    16.000000
+mean      0.226942
+std       0.096860
+min       0.075581
+25%       0.162608
+50%       0.193003
+75%       0.304955
+max       0.435714
+Name: informed_consent, dtype: float64

@@ -1,0 +1,21 @@
+replication topic distribution for documents in class 1:
+count    20.000000
+mean      0.191622
+std       0.048477
+min       0.111650
+25%       0.163690
+50%       0.180644
+75%       0.204532
+max       0.302013
+Name: replication, dtype: float64
+
+replication topic distribution for documents in class 0:
+count    6.000000
+mean     0.218156
+std      0.040742
+min      0.157895
+25%      0.201282
+50%      0.218418
+75%      0.234397
+max      0.278912
+Name: replication, dtype: float64

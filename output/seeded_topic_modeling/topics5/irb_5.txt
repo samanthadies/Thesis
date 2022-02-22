@@ -1,0 +1,21 @@
+irb topic distribution for documents in class 1:
+count    13.000000
+mean      0.195979
+std       0.028661
+min       0.158333
+25%       0.171875
+50%       0.196721
+75%       0.200000
+max       0.262500
+Name: irb, dtype: float64
+
+irb topic distribution for documents in class 0:
+count    13.000000
+mean      0.200860
+std       0.033089
+min       0.147239
+25%       0.184615
+50%       0.207547
+75%       0.208696
+max       0.264706
+Name: irb, dtype: float64

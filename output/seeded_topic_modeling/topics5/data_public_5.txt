@@ -1,0 +1,21 @@
+data_public topic distribution for documents in class 1:
+count    17.000000
+mean      0.179277
+std       0.080250
+min       0.078212
+25%       0.106870
+50%       0.151163
+75%       0.238095
+max       0.327273
+Name: data_public, dtype: float64
+
+data_public topic distribution for documents in class 0:
+count    9.000000
+mean     0.227683
+std      0.077858
+min      0.141026
+25%      0.194805
+50%      0.219512
+75%      0.237288
+max      0.406015
+Name: data_public, dtype: float64

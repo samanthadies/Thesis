@@ -1,0 +1,21 @@
+random_sample topic distribution for documents in class 1:
+count    20.000000
+mean      0.210511
+std       0.100453
+min       0.091603
+25%       0.136922
+50%       0.184806
+75%       0.253478
+max       0.455556
+Name: random_sample, dtype: float64
+
+random_sample topic distribution for documents in class 0:
+count    6.000000
+mean     0.175990
+std      0.067357
+min      0.108108
+25%      0.128718
+50%      0.162447
+75%      0.202381
+max      0.289773
+Name: random_sample, dtype: float64

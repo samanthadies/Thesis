@@ -1,0 +1,21 @@
+limitations topic distribution for documents in class 1:
+count    14.000000
+mean      0.207526
+std       0.075282
+min       0.136364
+25%       0.155797
+50%       0.185810
+75%       0.224898
+max       0.417910
+Name: limitations, dtype: float64
+
+limitations topic distribution for documents in class 0:
+count    12.000000
+mean      0.214605
+std       0.109970
+min       0.108597
+25%       0.127122
+50%       0.189906
+75%       0.257986
+max       0.443820
+Name: limitations, dtype: float64
