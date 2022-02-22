@@ -1,0 +1,21 @@
+noise topic distribution for documents in class 1:
+           noise      noise
+count  10.000000  10.000000
+mean    0.454393   0.545607
+std     0.094974   0.094974
+min     0.295181   0.446602
+25%     0.397523   0.476142
+50%     0.491836   0.508164
+75%     0.523858   0.602477
+max     0.553398   0.704819
+
+noise topic distribution for documents in class 0:
+           noise      noise
+count  16.000000  16.000000
+mean    0.533343   0.466657
+std     0.099333   0.099333
+min     0.379310   0.295775
+25%     0.444695   0.431323
+50%     0.541191   0.458809
+75%     0.568677   0.555305
+max     0.704225   0.620690

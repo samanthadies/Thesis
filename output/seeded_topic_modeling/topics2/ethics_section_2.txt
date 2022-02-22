@@ -1,0 +1,21 @@
+ethics_section topic distribution for documents in class 1:
+count    12.000000
+mean      0.509835
+std       0.053184
+min       0.430556
+25%       0.484326
+50%       0.508623
+75%       0.522817
+max       0.647059
+Name: ethics_section, dtype: float64
+
+ethics_section topic distribution for documents in class 0:
+count    14.000000
+mean      0.493973
+std       0.025538
+min       0.464286
+25%       0.475605
+50%       0.491069
+75%       0.500000
+max       0.555556
+Name: ethics_section, dtype: float64

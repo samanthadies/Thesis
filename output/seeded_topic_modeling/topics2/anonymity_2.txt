@@ -1,0 +1,21 @@
+anonymity topic distribution for documents in class 1:
+count    11.000000
+mean      0.501678
+std       0.035879
+min       0.445255
+25%       0.478674
+50%       0.506329
+75%       0.515686
+max       0.573333
+Name: anonymity, dtype: float64
+
+anonymity topic distribution for documents in class 0:
+count    15.000000
+mean      0.507455
+std       0.085232
+min       0.347107
+25%       0.468141
+50%       0.510638
+75%       0.549671
+max       0.658537
+Name: anonymity, dtype: float64

@@ -1,0 +1,21 @@
+feature_reconstruction topic distribution for documents in class 1:
+count    14.000000
+mean      0.526410
+std       0.106034
+min       0.296512
+25%       0.491827
+50%       0.535238
+75%       0.614668
+max       0.640777
+Name: feature_reconstruction, dtype: float64
+
+feature_reconstruction topic distribution for documents in class 0:
+count    12.000000
+mean      0.483570
+std       0.101477
+min       0.306358
+25%       0.432674
+50%       0.472892
+75%       0.524615
+max       0.677165
+Name: feature_reconstruction, dtype: float64

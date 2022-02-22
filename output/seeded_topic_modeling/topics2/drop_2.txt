@@ -1,0 +1,21 @@
+drop topic distribution for documents in class 1:
+count    14.000000
+mean      0.472082
+std       0.093202
+min       0.360544
+25%       0.403659
+50%       0.456658
+75%       0.508741
+max       0.701220
+Name: drop, dtype: float64
+
+drop topic distribution for documents in class 0:
+count    12.000000
+mean      0.511993
+std       0.138710
+min       0.205323
+25%       0.428530
+50%       0.531863
+75%       0.600379
+max       0.691011
+Name: drop, dtype: float64

@@ -1,0 +1,21 @@
+missing_values topic distribution for documents in class 1:
+count    6.000000
+mean     0.510901
+std      0.137254
+min      0.306358
+25%      0.424881
+50%      0.536111
+75%      0.618889
+max      0.652542
+Name: missing_values, dtype: float64
+
+missing_values topic distribution for documents in class 0:
+count    20.000000
+mean      0.512575
+std       0.100034
+min       0.356688
+25%       0.417997
+50%       0.520944
+75%       0.576150
+max       0.698324
+Name: missing_values, dtype: float64

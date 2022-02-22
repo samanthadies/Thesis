@@ -1,0 +1,21 @@
+text topic distribution for documents in class 1:
+count    11.000000
+mean      0.519977
+std       0.135374
+min       0.306667
+25%       0.457161
+50%       0.510204
+75%       0.538266
+max       0.838983
+Name: text, dtype: float64
+
+text topic distribution for documents in class 0:
+count    15.000000
+mean      0.444161
+std       0.090464
+min       0.273885
+25%       0.418861
+50%       0.435897
+75%       0.489437
+max       0.655556
+Name: text, dtype: float64
