@@ -1,0 +1,21 @@
+dem_dist topic distribution for documents in class 1:
+count    15.000000
+mean      0.066518
+std       0.041213
+min       0.022648
+25%       0.045855
+50%       0.050193
+75%       0.072982
+max       0.178882
+Name: dem_dist, dtype: float64
+
+dem_dist topic distribution for documents in class 0:
+count    11.000000
+mean      0.070389
+std       0.026586
+min       0.039752
+25%       0.046382
+50%       0.077220
+75%       0.081036
+max       0.130016
+Name: dem_dist, dtype: float64
