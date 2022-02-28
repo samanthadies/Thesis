@@ -1,0 +1,17 @@
+usernames,personal,individual,profile,anonymized,privacy,protect,anonymize,anonymous,anonymization,identifiable,deidentifying,deidentify,deidentified,id,identifiers,sensitive attributes,replace,identifying
+public,publicly,proprietary
+gender,identity,cultural,age,profile,national,inferred,distribution,demographic,demographics,first name,last name,infer,inference,race,orientation,sexual,ethnicity,female,male,spanish
+eliminated,drop,dropped,removed,unreliable,duplicate,duplicates,excluded,remain,remained,discarded,discarding,discard,excluded,exclude,eliminate
+implication,ethic,privacy,ethical,consideration,intent,implications,protection
+assign,define,vector,computed,ratio,tokenizer,normalize,regularization,bin,binned,binning,transformed,transform,rate,extract,extracted,extraction,zscore,normalization,generating features,building features,extract,normalized
+survey,questionnaire,respondent,history,informed,consent,obtain,obtained,medical,patient,approval,consenting,consented,cesd
+study,review,board,obtained,institutional,approval,approved,university,irb
+challenge,feasible,bias,limitation,limitations,suffer,biases,challenging,drawback,drawbacks,concomitance,comorbidity,concern,concerns
+filling,gap,gaps,supplementing,supplemented,fill,infer,inference,impute,imputed,estimated,inferring,missing values,supplement
+noise,noisy,genuine,unreliable,nonsensical,sarcastic,sarcasm,joke,jokes,disingenuous
+random,random sample,randomly,convenience sample,nonrandom
+available,release,github,code,email,replication,replicate,labeled data,share
+stopwords,stem,stemming,stems,porter,grams,bigrams,ngrams,tokenizer,tokenize,punctuation,nltk,stemmer,corpus,tokens,stopword,lowercase,unidecode,emoji,ascii,cleaned,linguistic,liwc
+tweet,twitter,tweeter,reddit,subreddit,subreddits,weibo,instagram,post,online,platform
+schizophrenia,depressive,sufferer,emotion,suicide,suicidal,ideation,risk,celebrity,sw,psychological,depression,depressed,healthy,diagnosis,ptsd,feeling,symptom,distress,anxiety,emotional,disorder,condition
+model,feature,classification,classifier,method,research,introduction,methods,class,collection,control,data,dataset,datasets
